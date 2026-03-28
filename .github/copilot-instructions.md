@@ -1,34 +1,30 @@
-# Copilot Instructions
+# Copilot instructions (50projects50days)
 
-This file contains guidelines for GitHub Copilot when working with this repository.
+Context: This repo is a collection of small, mostly standalone HTML/CSS/vanilla-JS mini projects ("50 Projects in 50 Days"). Changes are usually scoped to a single project folder.
 
-## General Guidelines
+## Project structure
+- Each project lives in its own directory (see README project table).
+- Expect plain `index.html`, `style.css`, `script.js` patterns per project.
 
-- Follow the established code style and conventions in this project
-- Ensure code is consistent with existing patterns
-- Write clear, maintainable code with appropriate comments
-- All generated code must be well-tested before integration
+## When generating or editing code
+- Keep solutions **framework-free** unless the target project already uses a framework.
+- Prefer **vanilla JavaScript** and modern DOM APIs.
+- Avoid introducing build steps, bundlers, or additional dependencies.
+- Keep code readable for beginners: short functions, clear variable names, and inline comments only where helpful.
 
-## Security
+## Styling conventions
+- Prefer simple, scoped CSS for the project folder you are editing.
+- Avoid global CSS that could affect other project folders.
 
-- Never include credentials, tokens, or sensitive information in generated code
-- Always mark sensitive operations with appropriate error handling
-- Use environment variables for configuration management
+## Bug fixes / enhancements
+- Make changes only within the relevant project directory.
+- Do not refactor unrelated projects.
+- If adding a new feature, include a brief note in the project’s README (if present) or comments.
 
-## Testing
+## Security & safety
+- Never add secrets or tokens.
+- If a project fetches external APIs, include basic error handling and user-friendly fallback UI.
 
-- Generate code with testability in mind
-- Include unit tests for new functionality when applicable
-- Ensure generated code doesn't break existing tests
-
-## Documentation
-
-- Update relevant documentation when generating new features
-- Include inline comments for complex logic
-- Keep README files current
-
-## Performance and Best Practices
-
-- Consider performance implications of generated solutions
-- Use established libraries and patterns when available
-- Avoid reinventing the wheel
+## Testing / validation
+- There is no central test runner; validate by running the project in the browser.
+- Ensure the page loads without console errors and works on mobile widths where relevant.
